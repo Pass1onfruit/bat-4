@@ -1,0 +1,20 @@
+#include <stdio.h>  
+
+void leap_year (int year);
+
+int main()
+{  
+    int year;  
+    while(scanf("%d", &year) != EOF)
+	leap_year (year);
+
+	return 0;
+}
+
+void leap_year (int year)
+{
+	if (year % 4  == 0 && year % 100 != 0  || year % 400 == 0)  
+        printf("%d is leap year\n", year);  
+    else  
+        printf ("%d not leap year\n", year); 
+}
